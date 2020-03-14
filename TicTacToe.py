@@ -2,7 +2,6 @@ def inputPosition(): # position on board
     pos = int(input("Insert index of board position : ")) # users input for placement of letter on the board
     return pos
 
-
 def checkMove(pos): 
     """
     Checks if move being played is a valid move or not
@@ -14,7 +13,6 @@ def checkMove(pos):
        return False
     else:
         return True 
-
 
 def printBoard(curBoard):
     """ Displays the current state of the board to screen
@@ -28,13 +26,11 @@ def printBoard(curBoard):
     print("\n\t {}\t | \t {} \t | \t {}".format(curBoard[2][0],curBoard[2][1],curBoard[2][2]))
     print("\n\n")
 
-
 def boardFunc(board,position,letter): 
     """
     takes in the three args, the board, position of x or piece to be placed on board, and currenponding letter( x or o)
     function updates the board location and returns True if update was made and False for updates not made
     """
-
     updateStatus = False
     if position == board[0][0]:
         board[0][0] = letter
@@ -68,7 +64,6 @@ def boardFunc(board,position,letter):
 
     return board, updateStatus 
 
-
 def winCheck(board): 
     """takes in a boards current state of play and analyses it for a win. If it returns True a player has won, if it returns False 
     the game has ended in a draw   
@@ -98,7 +93,6 @@ def winCheck(board):
         winStatus = True
 
     return winStatus
-
 
 def makeMove():
     """
@@ -130,7 +124,6 @@ def makeMove():
                 break
     if win == False:
         print("Game ended in a Draw!")
-
 
 def ticTacToe():
     """ Simulates Tic Tac Toe game
